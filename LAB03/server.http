@@ -1,0 +1,13 @@
+GET http://localhost:3000/?method=add&x=16&y=4
+
+###
+
+GET http://localhost:3000/?method=subtract&x=16&y=4
+
+###
+
+GET http://localhost:3000/?method=multiply&x=16&y=4
+
+###
+
+GET http://localhost:3000/?method=divide&x=16&y=4
