@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <%- include('partials/navbar') %>
+      <div class="jumbotron">
+        <h1>About Me</h1>
+        <p class="lead">Professional Background & Personal Interests</p>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <h2>Professional Summary</h2>
+          <p>
+            I am an IT Systems Analyst and Software Developer with experience in IT service management and full-stack development. My background includes working with diverse teams and implementing efficient IT solutions.
+          </p>
+          <p>
+            I'm pursuing a Computer Programming diploma at Georgian College to enhance my technical skills while working full-time. I have a strong foundation in both development and IT operations, making me effective at bridging the gap between these domains.
+          </p>
+          
+          <h2>Personal Interests</h2>
+          <p>
+            When I'm not coding or resolving IT issues, I enjoy learning about new technologies and contributing to problem-solving in technical environments. I'm passionate about continuous improvement and finding efficient solutions to complex challenges.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Quick Facts</h3>
+            </div>
+            <div class="panel-body">
+              <ul class="list-group">
+                <li class="list-group-item">Based in Barrie, Ontario</li>
+                <li class="list-group-item">Currently employed at Georgian College</li>
+                <li class="list-group-item">Fluent in English and Portuguese</li>
+                <li class="list-group-item">Computer Programming student</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <%- include('partials/footer') %>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

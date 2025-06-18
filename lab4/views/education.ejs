@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <%- include('partials/navbar') %>
+      
+      <div class="jumbotron">
+        <h1>Education</h1>
+        <p class="lead">Academic background and professional development</p>
+      </div>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Computer Programming</h3>
+          <p class="timeline-date">2024 - Present | Georgian College, Barrie, ON</p>
+          <p>
+            Advanced diploma program focusing on modern programming languages and software development.
+          </p>
+          <ul>
+            <li>Currently maintaining a high academic average while working full-time</li>
+            <li>Learning JavaScript, Node.js, Python, C#, and database technologies</li>
+            <li>Developing skills in web development, mobile app development, and software engineering</li>
+            <li>Focusing on practical applications and industry-relevant projects</li>
+          </ul>
+        </div>
+        
+        <div class="timeline-item">
+          <h3>Bachelor of Computer Science</h3>
+          <p class="timeline-date">2014 - 2018 | Centro Universitário FIAP, São Paulo, Brazil</p>
+          <p>
+            Comprehensive undergraduate education in computer science fundamentals and software development.
+          </p>
+          <ul>
+            <li>Completed coursework in algorithms, data structures, and software engineering</li>
+            <li>Participated in group projects developing web and mobile applications</li>
+            <li>Studied database design, network infrastructure, and programming paradigms</li>
+            <li>Gained foundation in theoretical and practical aspects of computer science</li>
+          </ul>
+        </div>
+      </div>
+      
+      <h2>Certifications & Professional Development</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Technical Certifications</h3>
+            </div>
+            <div class="panel-body">
+              <ul class="list-group">
+                <li class="list-group-item">ITIL Foundation</li>
+                <li class="list-group-item">Microsoft Azure Fundamentals (AZ-900)</li>
+                <li class="list-group-item">CompTIA A+</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Additional Training</h3>
+            </div>
+            <div class="panel-body">
+              <ul class="list-group">
+                <li class="list-group-item">React Development Course</li>
+                <li class="list-group-item">Node.js Masterclass</li>
+                <li class="list-group-item">ServiceNow Administration</li>
+                <li class="list-group-item">JavaScript for Web Development</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <%- include('partials/footer') %>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
