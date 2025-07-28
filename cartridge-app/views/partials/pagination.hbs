@@ -1,0 +1,33 @@
+{{#if pagination}}
+<div class="pagination">
+    {{#if pagination.previous}}
+        <a href="/cartridges?page={{pagination.previous}}" class="page-link page-previous">
+            <span class="page-arrow">←</span> Previous
+        </a>
+    {{else}}
+        <span class="page-link page-previous disabled">
+            <span class="page-arrow">←</span> Previous
+        </span>
+    {{/if}}
+    
+    <div class="page-numbers">
+        {{#each pagination.pages}}
+            {{#if (eq this ../pagination.current)}}
+                <span class="page-number current">{{this}}</span>
+            {{else}}
+                <a href="/cartridges?page={{this}}" class="page-number">{{this}}</a>
+            {{/if}}
+        {{/each}}
+    </div>
+    
+    {{#if pagination.next}}
+        <a href="/cartridges?page={{pagination.next}}" class="page-link page-next">
+            Next <span class="page-arrow">→</span>
+        </a>
+    {{else}}
+        <span class="page-link page-next disabled">
+            Next <span class="page-arrow">→</span>
+        </span>
+    {{/if}}
+</div>
+{{/if}}

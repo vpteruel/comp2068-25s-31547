@@ -4,8 +4,18 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var hbs = require('hbs');
+const connectDB = require('./config/database');
 
+// Connect to the database
+connectDB();
+
+// Register Handlebars partials
 hbs.registerPartials(path.join(__dirname, 'views/partials'));
+
+// Register Handlebars helpers
+hbs.registerHelper('eq', function(a, b) {
+  return a === b;
+});
 
 var indexRouter = require('./routes/index');
 var cartridgeRouter = require('./routes/cartridges');

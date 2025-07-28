@@ -1,5 +1,44 @@
 {{> background}}
 {{> navigation}}
 {{> mobilemenu}}
-{{> cartridges}}
+
+<section class="cartridges">
+    <div class="cartridges-container">
+        <div class="section-header">
+            <h2 class="section-title">Featured Cartridges</h2>
+            <p class="section-subtitle">Browse our selection of premium game cartridges</p>
+        </div>
+        
+        <!-- Top pagination -->
+        {{> pagination}}
+        
+        <div id="loading-animation" class="loading-container">
+            <div class="loading-spinner"></div>
+            <p>Loading game cartridges...</p>
+        </div>
+
+        <div id="cartridges-grid" class="cartridges-grid" style="display: none;">
+        {{#if cartridges.length}}
+            {{#each cartridges}}
+                <div class="cartridge-card" onclick="window.location='/cartridges/{{this.slug}}'">
+                    <div class="cartridge-icon">
+                        <img src="{{this.image}}" alt="{{this.title}}" onload="this.style.opacity='1'">
+                    </div>
+                    <h3>{{this.title}}</h3>
+                    <p>{{this.genre}} • {{this.developer}}</p>
+                    <span class="view-details">View Details</span>
+                </div>
+            {{/each}}
+        {{else}}
+            <p>No cartridges found. Please check back later.</p>
+        {{/if}}
+        </div>
+        
+        <!-- Bottom pagination -->
+        {{> pagination}}
+    </div>
+</section>
+
 {{> footer}}
+
+<script src="/javascripts/loading.js"></script>

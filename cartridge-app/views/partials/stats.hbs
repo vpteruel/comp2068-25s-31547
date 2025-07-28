@@ -2,20 +2,19 @@
     <div class="stats-container">
         <div class="stats-grid">
             <div class="stat-item">
-                <span class="stat-number">50K+</span>
-                <span class="stat-label">Active Users</span>
+                <span class="stat-number">{{stats.totalCartridges}}</span>
+                <span class="stat-label">Total Games</span>
             </div>
             <div class="stat-item">
-                <span class="stat-number">99.9%</span>
-                <span class="stat-label">Uptime</span>
+                <span class="stat-number">{{stats.developerCount}}</span>
+                <span class="stat-label">Developers</span>
             </div>
             <div class="stat-item">
-                <span class="stat-number">500M+</span>
-                <span class="stat-label">Tasks Processed</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">180+</span>
-                <span class="stat-label">Countries</span>
+                <span class="stat-number">{{stats.genreCount}}</span>
+                <span class="stat-label">Game Genres</span>
+            </div><div class="stat-item">
+                <span class="stat-number">{{stats.newestGameYear}}</span>
+                <span class="stat-label">Newest Release</span>
             </div>
         </div>
     </div>
