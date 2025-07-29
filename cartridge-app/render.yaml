@@ -1,6 +1,6 @@
 services:
 - type: web
-  name: comp2068-25s-31547-lab4
+  name: cartridge-app
   runtime: node
   repo: https://github.com/vpteruel/comp2068-25s-31547
   plan: free
@@ -13,5 +13,5 @@ services:
   buildCommand: pnpm install
   startCommand: node ./bin/www
   autoDeployTrigger: commit
-  rootDir: lab4
+  rootDir: cartridge-app
 version: "1"
