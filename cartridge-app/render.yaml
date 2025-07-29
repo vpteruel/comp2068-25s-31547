@@ -1,0 +1,19 @@
+services:
+- type: web
+  name: cartridge-app
+  runtime: node
+  repo: https://github.com/vpteruel/comp2068-25s-31547
+  plan: free
+  envVars:
+  - key: PORT
+    sync: false
+  - key: NODE_ENV
+    sync: false
+  - key: MONGODB_URI
+    sync: false
+  region: virginia
+  buildCommand: pnpm install
+  startCommand: node ./bin/www
+  autoDeployTrigger: commit
+  rootDir: cartridge-app
+version: "1"
