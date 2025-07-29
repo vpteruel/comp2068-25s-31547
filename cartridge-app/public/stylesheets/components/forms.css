@@ -1,0 +1,53 @@
+/* Form styles */
+.admin-form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.admin-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--primary-cyan);
+  font-weight: bold;
+}
+
+.admin-form input[type="text"],
+.admin-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.admin-form input[type="file"] {
+  padding: 0.8rem 0;
+  color: var(--text-primary);
+}
+
+.form-hint {
+  margin-top: 0.3rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.current-image {
+  margin-bottom: 1rem;
+}
+
+.current-image img {
+  border: 1px solid var(--border-color);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.current-image p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}

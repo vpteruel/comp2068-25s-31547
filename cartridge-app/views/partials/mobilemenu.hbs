@@ -6,6 +6,14 @@
     </div>
     <nav class="mobile-menu-nav">
         <ul>
+            {{#if user}}
+                {{#if user.isAdmin}}
+                    <li><a href="/admin">Admin</a></li>
+                {{/if}}
+                <li><a href="/auth/logout">Logout</a></li>
+            {{else}}
+                <li><a href="/auth/login">Login</a></li>
+            {{/if}}
         </ul>
     </nav>
 </div>

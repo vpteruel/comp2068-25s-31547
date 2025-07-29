@@ -1,0 +1,59 @@
+{{> background}}
+{{> navigation}}
+{{> mobilemenu}}
+
+<section class="admin">
+  <div class="admin-container">
+    <div class="admin-header">
+      <h1>Edit Cartridge</h1>
+      <a href="/admin" class="admin-button back">Back to Dashboard</a>
+    </div>
+    
+    {{#if error}}
+      <div class="alert error">{{error}}</div>
+    {{/if}}
+    
+    <form action="/admin/edit/{{cartridge._id}}" method="POST" class="admin-form" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" value="{{cartridge.title}}" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" name="description" rows="5" required>{{cartridge.description}}</textarea>
+      </div>
+      
+      <div class="form-group">
+        <label for="image">Image</label>
+        <div class="current-image">
+          <img src="{{cartridge.image}}" alt="{{cartridge.title}}" width="100">
+          <p>Current image</p>
+        </div>
+        <input type="file" id="image" name="image" accept="image/*">
+        <p class="form-hint">Leave blank to keep current image</p>
+      </div>
+      
+      <div class="form-group">
+        <label for="releaseDate">Release Date</label>
+        <input type="text" id="releaseDate" name="releaseDate" value="{{cartridge.releaseDate}}" placeholder="Month DD, YYYY" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="developer">Developer</label>
+        <input type="text" id="developer" name="developer" value="{{cartridge.developer}}" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="genre">Genre</label>
+        <input type="text" id="genre" name="genre" value="{{cartridge.genre}}" required>
+      </div>
+      
+      <div class="form-group">
+        <button type="submit" class="admin-button update">Update Cartridge</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+{{> footer}}

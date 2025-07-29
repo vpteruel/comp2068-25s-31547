@@ -1,0 +1,113 @@
+/* Admin styles */
+.admin {
+  padding: 5rem 0;
+}
+
+.admin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.admin-header h1 {
+  color: var(--primary-cyan);
+  font-size: 2rem;
+  margin: 0;
+}
+
+.admin-button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--primary-cyan);
+  color: var(--bg-color);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.admin-button:hover {
+  background-color: var(--primary-purple);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+}
+
+.admin-button.back {
+  background-color: transparent;
+  border: 1px solid var(--primary-cyan);
+  color: var(--primary-cyan);
+}
+
+.admin-button.back:hover {
+  background-color: rgba(0, 255, 255, 0.1);
+}
+
+.admin-button.edit {
+  background-color: var(--primary-purple);
+}
+
+.admin-button.delete {
+  background-color: #ff3366;
+}
+
+/* Admin table styles */
+.admin-table-container {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--text-primary);
+}
+
+.admin-table th {
+  text-align: left;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--primary-cyan);
+  border-bottom: 2px solid var(--border-color);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.admin-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.admin-table tr:hover {
+  background-color: rgba(0, 255, 255, 0.05);
+}
+
+.admin-image img {
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.delete-form {
+  display: inline;
+}
+
+.no-data {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+}

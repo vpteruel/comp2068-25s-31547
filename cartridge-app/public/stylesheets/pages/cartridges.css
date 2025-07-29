@@ -1,0 +1,116 @@
+/* Cartridges Section */
+.cartridges {
+    padding: 120px 2rem;
+    position: relative;
+}
+
+.cartridges-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-cyan);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    position: relative;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-cyan), var(--primary-purple));
+    box-shadow: 0 0 20px var(--primary-cyan);
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cartridges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.cartridge-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 3rem;
+    position: relative;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+    clip-path: polygon(20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0% 100%, 0% 20px);
+    cursor: pointer;
+}
+
+.cartridge-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 255, 255, 0.3);
+}
+
+.cartridge-card:active {
+    transform: translateY(0px);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+}
+
+.cartridge-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--primary-cyan), var(--primary-pink));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.cartridge-card:hover::before {
+    opacity: 0.1;
+}
+
+.cartridge-icon {
+    width: 300px;
+    height: 487px;
+    background: linear-gradient(135deg, var(--primary-cyan), var(--primary-purple));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    clip-path: polygon(15px 0%, 100% 0%, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0% 100%, 0% 15px);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+}
+
+.cartridge-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-cyan);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cartridge-card p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+}

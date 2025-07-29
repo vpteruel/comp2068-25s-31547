@@ -1,0 +1,83 @@
+/* Cartridge Details */
+.cartridge-details-container {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 8rem;
+    padding: 2rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+    clip-path: polygon(20px 0%, 100% 0%, calc(100% - 20px) 100%, 0% 100%);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+}
+
+.cartridge-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.cartridge-image img {
+  width: 100%;
+  height: auto;
+  border: 2px solid var(--border-color);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  clip-path: polygon(15px 0%, 100% 0%, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0% 100%, 0% 15px);
+}
+
+.cartridge-image img:hover {
+  box-shadow: 0 0 50px rgba(0, 255, 255, 0.4);
+  transform: scale(1.02);
+}
+
+.cartridge-info h1 {
+  font-size: 2.5rem;
+  color: var(--primary-cyan);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.cartridge-description {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.cartridge-details {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cartridge-details li {
+  margin-bottom: 0.8rem;
+  color: var(--text-primary);
+  font-size: 1rem;
+  border-left: 3px solid var(--primary-purple);
+  padding-left: 1rem;
+}
+
+.cartridge-details li strong {
+  color: var(--primary-cyan);
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .cartridge-details-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .cartridge-image {
+    margin-bottom: 1rem;
+  }
+  
+  .cartridge-info h1 {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+}

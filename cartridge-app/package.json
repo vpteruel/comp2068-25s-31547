@@ -6,14 +6,20 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "connect-flash": "^0.1.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^17.2.1",
     "express": "~4.16.1",
+    "express-session": "^1.18.2",
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
     "mongoose": "^8.16.5",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "multer": "^2.0.2",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0"
   },
   "packageManager": "pnpm@10.11.1+sha512.e519b9f7639869dc8d5c3c5dfef73b3f091094b0a006d7317353c72b124e80e1afd429732e28705ad6bfa1ee879c1fce46c128ccebd3192101f43dd67c667912"
 }

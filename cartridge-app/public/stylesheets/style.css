@@ -668,11 +668,12 @@ nav {
     }
     
     .nav-links {
-        flex: 1;
+        flex: 0 0 auto;
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        margin: 0 2rem;
+        justify-content: flex-end;
+        margin: 0;
+        margin-left: auto;
         max-width: none;
     }
     
@@ -746,6 +747,7 @@ nav {
     display: flex;
     list-style: none;
     gap: 2.5rem;
+    margin-left: auto; /* This pushes links to the right */
 }
 
 .nav-links a {
@@ -1610,7 +1612,7 @@ nav {
 
 .page-number.current {
   background-color: var(--primary-cyan);
-  color: var(--bg-color);
+  color: rgba(0, 0, 0, 0.9);
   border-color: var(--primary-cyan);
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 }
@@ -1793,4 +1795,189 @@ nav {
 
 .back-link:hover .back-icon {
   transform: translateX(-3px);
+}
+
+/* Authentication styles */
+.auth {
+  padding: 5rem 0;
+}
+
+.auth-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.auth-header h1 {
+  color: var(--primary-cyan);
+  font-size: 2rem;
+  margin: 0;
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.auth-button {
+  display: inline-block;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--primary-cyan);
+  color: rgba(0, 0, 0, 0.9);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+.auth-button:hover {
+  background-color: var(--primary-purple);
+  color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+}
+
+/* Admin styles */
+.admin {
+  padding: 5rem 0;
+}
+
+.admin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.admin-header h1 {
+  color: var(--primary-cyan);
+  font-size: 2rem;
+  margin: 0;
+}
+
+.admin-button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--primary-cyan);
+  color: var(--bg-color);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.admin-button:hover {
+  background-color: var(--primary-purple);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+}
+
+.admin-button.back {
+  background-color: transparent;
+  border: 1px solid var(--primary-cyan);
+  color: var(--primary-cyan);
+}
+
+.admin-button.back:hover {
+  background-color: rgba(0, 255, 255, 0.1);
+}
+
+.admin-button.add {
+  color: rgba(0, 0, 0, 0.9)
+}
+
+.admin-button.add:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.admin-button.edit {
+  background-color: var(--primary-purple);
+}
+
+.admin-button.delete {
+  background-color: #ff3366;
+}
+
+.admin-button.update {
+  color: rgba(0, 0, 0, 0.9)
+}
+
+.admin-button.update:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Admin table styles */
+.admin-table-container {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--text-primary);
+}
+
+.admin-table th {
+  text-align: left;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--primary-cyan);
+  border-bottom: 2px solid var(--border-color);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.admin-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.admin-table tr:hover {
+  background-color: rgba(0, 255, 255, 0.05);
+}
+
+.admin-image img {
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.delete-form {
+  display: inline;
+}
+
+.no-data {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
 }

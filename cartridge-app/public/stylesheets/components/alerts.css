@@ -1,0 +1,18 @@
+/* Alert messages */
+.alert {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+}
+
+.alert.success {
+  background-color: rgba(0, 255, 128, 0.1);
+  border: 1px solid #00ff80;
+  color: #00ff80;
+}
+
+.alert.error {
+  background-color: rgba(255, 51, 102, 0.1);
+  border: 1px solid #ff3366;
+  color: #ff3366;
+}
