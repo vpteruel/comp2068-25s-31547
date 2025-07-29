@@ -2,14 +2,8 @@
     <div class="nav-container">
         <a href="/" class="logo">NexusCartridge</a>
         <ul class="nav-links">
-            {{#if user}}
-                {{#if user.isAdmin}}
-                    <li><a href="/admin">Admin</a></li>
-                {{/if}}
-                <li><a href="/auth/logout">Logout</a></li>
-            {{else}}
-                <li><a href="/auth/login">Login</a></li>
-            {{/if}}
+            <li><a href="/cartridges">Cartridges</a></li>
+            <li><a href="/admin">Admin</a></li>
         </ul>
         <button class="mobile-menu-button" id="mobileMenuBtn">
             <div class="hamburger">
